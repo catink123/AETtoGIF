@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "AETtoGIF",
+    "version": "0.1",
+    "description": "Adds a panel to AN-EN-Tags Website to record Spine animations and export them to an Animated GIF.",
+    "author": "Catink123",
+    "content_scripts": [
+        {
+            "matches": ["https://aceship.github.io/AN-EN-Tags/*"],
+            "js": ["content.js"],
+            "css": ["content.css"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": ["https://aceship.github.io/*"],
+            "resources": ["inpage.js", "lib/gif.js", "lib/gif.js.map", "lib/gif.worker.js"]
+        }
+    ]
+}
